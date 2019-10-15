@@ -15,9 +15,30 @@ export class BuilderComponent &#123;
     console.log(event.form);
   &#125;
 &#125;</code></pre>
-<form-builder [form]="form" (change)="onChange($event)"></form-builder>
+<form-builder [options]= '{
+  "builder": {
+    "basic": false,
+    "advanced": false,
+    "data": false,
+    "layout": false,  
+    "customBasic": {      
+      "title": "Basic Components",
+      "weight": 0,
+      "default": false,      
+      "components": {  
+        "checkmatrix": true
+                
+        
+      }
+    }    
+}}'
+[form]="form" class="formio" (change)="onChange($event)"></form-builder>  
+
+
+
 <hr/>
 <h3 class="text-center text-muted">As JSON Schema</h3>
 <div class="well jsonviewer">
   <pre id="json"><code class="language-json" #json></code></pre>
 </div>
+

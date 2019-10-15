@@ -31,16 +31,7 @@ export default class CheckMatrix extends Base {
     });
   }
 
-  static builderInfo = {
-    title: 'Check Matrix',
-    group: 'basic',
-    icon: 'fa fa-table',
-    weight: 70,
-    documentation: 'http://help.form.io/userguide/#table',
-    schema: CheckMatrix.schema()
-  }
 
-  static editForm = editForm
 
   /**
    * Render returns an html string of the fully rendered component.
@@ -172,6 +163,13 @@ export default class CheckMatrix extends Base {
 
 // Use the table component edit form.
 CheckMatrix.editForm = editForm;
-
+CheckMatrix.builderInfo = {
+  title: 'Check Matrix',
+  group: 'basic',
+  icon: 'fa fa-table',
+  weight: 70,
+  documentation: 'http://help.form.io/userguide/#table',
+  schema: CheckMatrix.schema()
+};
 // Register the component to the Formio.Components registry.
 Components.addComponent('checkmatrix', CheckMatrix);
