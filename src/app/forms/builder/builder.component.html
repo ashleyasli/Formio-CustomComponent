@@ -17,21 +17,18 @@ export class BuilderComponent &#123;
 &#125;</code></pre>
 <form-builder [options]= '{
   "builder": {
-    "basic": false,
-    "advanced": false,
-    "data": false,
-    "layout": false,  
-    "customBasic": {      
-      "title": "Basic Components",
-      "weight": 0,
-      "default": false,      
-      "components": {  
-        "checkmatrix": true
-                
-        
+		"basic": false,
+		"advanced": false,
+		"data": false,
+		"customBasic": {
+			"title": "CheckMatrix",
+			"default": true,
+			"weight": 0,
+			"components": {
+        "checkmatrix":true
       }
-    }    
-}}'
+    
+		}}}'
 [form]="form" class="formio" (change)="onChange($event)"></form-builder>  
 
 
